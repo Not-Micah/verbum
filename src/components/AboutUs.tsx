@@ -5,7 +5,7 @@ const AboutUs = () => {
     <section className="flex flex-col justify-center items-center gap-16 mb-[10rem] mx-24 max-w-[1100px] max-md:gap-10" id="about">
         <div className="flex flex-col gap-10">
             <h3 className="dynamic-heading font-bold font-body text-center">About Us</h3>
-            <p className="text-center text-gray-800 dynamic-text max-w-[800px]">Verbum offers many features to ensure you find the verse you're looking for! Here are some of our key features.</p>
+            <p className="text-center text-gray-800 dynamic-text max-w-[800px]">Verbum offers many features to ensure you find the verse you&apos;re looking for! Here are some of our key features.</p>
         </div>
         <div className="gap-16 grid grid-cols-2 max-md:grid-cols-1">
             {aboutUs.map((item, index) => (
