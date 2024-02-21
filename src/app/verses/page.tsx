@@ -22,7 +22,7 @@ interface VerseObject {
 
 const getVerses = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/verses", {
+    const res = await fetch("https://verbum-beta.vercel.app/api/verses", {
       cache: "no-store",
     });
 
