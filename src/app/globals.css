@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Gradient Circles */
+.circle {
+  @apply absolute rounded-full filter -z-[2] blur-[125px] opacity-[35%]
+} 
+
+.circle-lg {
+  @apply w-[20rem] h-[20rem]
+}
+
+.circle-md {
+  @apply w-[15rem] h-[15rem]
+}
+
+.circle-sm {
+  @apply w-[10rem] h-[10rem]
+}
+
+/* Hover Effects */
+.hover-scale {
+  @apply cursor-pointer transition-transform duration-[300] ease-linear hover:scale-110
+}
+
+.nav-list li:hover {
+  @apply transition-transform duration-[100] ease-linear hover:scale-105
+}
+.primary-button {
+  @apply bg-soft-purple outline-none text-white font-semibold
+}
+
+.accent-button {
+  @apply bg-white outline text-black font-semibold outline-none
+}
+
+/* Verses Color Scheme */
+.gradient-gold {
+  @apply bg-gradient-to-r from-[#ffdc73] to-[#ffbf00]
+}
+
+.gradient-blue {
+  @apply bg-gradient-to-r from-soft-blue to-soft-blue-two
+}
+
+/* Structure */
+.rounded-container {
+  @apply p-6 rounded-md shadow-md
+}
+
+.filter-container {
+  @apply p-3 rounded-md shadow-md
+}
+
+/* Media Queries */
+.dynamic-text {
+  @apply text-lg max-lg:text-lg max-md:text-base max-sm:text-sm
+}
+
+.dynamic-label {
+  @apply text-base max-lg:text-base max-md:text-sm
+}
+
+.dynamic-title {
+  @apply text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-3xl
+}
+
+.dynamic-heading {
+  @apply text-5xl max-lg:text-5xl max-md:text-4xl
+}
+
