@@ -40,7 +40,7 @@ const FilterCard = ({
       >
         <FaRegCircleXmark className="text-red-500 text-lg" />
       </div>
-      <p className="font-bold font-mon dynamic-label">{titleCase(idValue)}</p>
+      <p className="font-body dynamic-label">{titleCase(idValue)}</p>
     </div>
   );
 };

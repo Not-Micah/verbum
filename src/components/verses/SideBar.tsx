@@ -2,13 +2,7 @@
 
 import { useState } from "react";
 import CheckCard from "./CheckCard";
-import {
-  CharActiveType,
-  titleCase,
-  Filter2D,
-  filterData,
-  keys,
-} from "@/data";
+import { CharActiveType, titleCase, Filter2D, filterData, keys } from "@/data";
 import FilterCard from "./FilterCard";
 
 const SideBar = () => {
@@ -52,7 +46,9 @@ const SideBar = () => {
     <div className="flex justify-start gap-6 flex-col">
       <div className="rounded-container">
         <div className="filter-container gradient-gold">
-          <p className="font-body w-full text-center text-body text-lg py-2">Active Filters</p>
+          <p className="font-body w-full text-center dynamic-text text-lg py-2">
+            Active Filters
+          </p>
           <div className="flex flex-row justify-center gap-2 items-center flex-wrap">
             {keys.flatMap((key) =>
               Object.entries(filterControls[key].state).map(

@@ -46,9 +46,13 @@
   @apply bg-gradient-to-r from-soft-blue to-soft-blue-two
 }
 
+.skeleton {
+  @apply bg-gray-300 text-gray-300 animate-pulse rounded-md
+}
+
 /* Structure */
 .rounded-container {
-  @apply p-6 rounded-md shadow-md
+  @apply p-6 rounded-md shadow-md max-sm:p-3
 }
 
 .filter-container {
@@ -64,11 +68,23 @@
   @apply text-base max-lg:text-base max-md:text-sm
 }
 
+.dynamic-subtitle {
+  @apply text-3xl max-lg:text-2xl max-md:text-xl
+}
+
 .dynamic-title {
-  @apply text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-3xl
+  @apply text-7xl max-lg:text-6xl max-md:text-3xl
 }
 
 .dynamic-heading {
-  @apply text-5xl max-lg:text-5xl max-md:text-4xl
+  @apply text-5xl max-lg:text-5xl max-md:text-2xl
 }
 
+.dynamic-icon {
+  @apply text-2xl max-lg:text-xl max-md:text-lg
+}
+
+/* Other Stuff */
+.nav-item {
+  @apply w-[75vw] text-black p-1 mx-2
+}

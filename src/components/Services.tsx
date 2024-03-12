@@ -2,7 +2,7 @@ import { services } from "@/data";
 
 const Services = () => {
   return (
-    <section className="max-w-[1500px] mx-24 grid grid-cols-8 gap-12 mb-[10rem] max-xl:flex max-xl:flex-col max-xl:items-center">
+    <section className="max-w-[1500px] mx-24 grid grid-cols-8 gap-12 mb-[10rem] max-xl:flex max-xl:flex-col max-xl:items-center max-xl:mx-8">
       <div className="col-span-2 flex flex-col justify-start items-start gap-8 max-xl:items-center">
         <p className="font-body text-dark-purple font-semibold">
           Still wondering?
@@ -21,7 +21,7 @@ const Services = () => {
             className="flex flex-col justify-start items-start shadow-3xl rounded-lg py-9 px-6 gap-6 flex-1 h-[18rem] max-w-[25rem]
         transition-transform duration-[100] ease-linear hover:scale-105 bg-accent-two max-xl:max-w-[40rem]"
           >
-            <div className="text-2xl p-3 rounded-full bg-soft-purple text-white">
+            <div className="dynamic-icon p-3 rounded-full bg-soft-purple text-white">
               {service.icon} 
             </div>
             <div className="">
