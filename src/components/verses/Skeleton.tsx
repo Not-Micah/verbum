@@ -7,14 +7,14 @@ const Skeleton = () => {
       <h3 className="skeleton w-full">.</h3>
       {Array(4)
         .fill(null)
-        .map((t) => (
-          <p className="skeleton w-full text-[0.2rem]">.</p>
+        .map((t, index) => (
+          <p className="skeleton w-full text-[0.2rem]" key={index}>.</p>
         ))}
       <div className="flex flex-row flex-wrap justify-start items-center gap-2">
         {Array(3)
           .fill(null)
-          .map((t) => (
-            <div className="w-[2rem] h-[1rem] skeleton"></div>
+          .map((t, index) => (
+            <div className="w-[2rem] h-[1rem] skeleton" key={index}></div>
           ))}
       </div>{" "}
     </div>

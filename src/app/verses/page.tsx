@@ -1,4 +1,3 @@
-import VerseCard from "@/components/VerseCard";
 import SearchBar from "@/components/verses/SearchBar";
 import SideBar from "@/components/verses/SideBar";
 import NavBar from "@/components/NavBar";

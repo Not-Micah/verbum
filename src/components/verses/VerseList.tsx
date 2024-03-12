@@ -86,8 +86,8 @@ const VerseList = ({ searchParams }: { searchParams: Params }) => {
       <div className="">
         {isLoading ? (
           <div className="my-5 flex flex-col justify-start gap-5">
-            {Array(5).fill(null).map((t) => (
-              <Skeleton />
+            {Array(5).fill(null).map((t, index) => (
+              <Skeleton key={index} />
             ))}
           </div>
         ) : (
