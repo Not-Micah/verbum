@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500&display=swap');
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -60,6 +60,10 @@
 }
 
 /* Media Queries */
+.dynamic-small {
+  @apply text-sm max-lg:text-xs
+}
+
 .dynamic-text {
   @apply text-lg max-lg:text-lg max-md:text-base max-sm:text-sm
 }
@@ -73,11 +77,11 @@
 }
 
 .dynamic-title {
-  @apply text-7xl max-lg:text-6xl max-md:text-3xl
+  @apply text-7xl max-lg:text-6xl max-md:text-4xl
 }
 
 .dynamic-heading {
-  @apply text-5xl max-lg:text-5xl max-md:text-2xl
+  @apply text-5xl max-lg:text-5xl max-md:text-3xl
 }
 
 .dynamic-icon {

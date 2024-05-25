@@ -21,8 +21,8 @@ const NavBarModal = ({ setShowNav }: { setShowNav: Function }) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bottom-0 w-full h-full flex justify-end">
-      <div ref={modalRef} className="max-w-[300px] pr-5 pl-20 pt-20 backdrop-filter backdrop-blur-lg bg-opacity-50 shadow-lg">
-        <ul className="flex flex-col justify-start items-center gap-16 nav-list">
+      <div ref={modalRef} className="max-w-[300px] pr-5 pl-20 pt-20 backdrop-filter backdrop-blur-sm bg-opacity-10 bg-black/5 shadow-lg">
+        <ul className="flex flex-col justify-start items-end gap-8 nav-list ">
           <button className="text-xl" onClick={() => setShowNav(false)}>
             <IoCloseOutline />
           </button>

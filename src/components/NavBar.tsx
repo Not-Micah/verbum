@@ -38,8 +38,8 @@ const NavBar = () => {
           <img src="../../logo.png" className="w-[2rem] h-[2rem]" alt="" />
         </a>
         <button
-          className="bg-soft-purple text-white text-2xl p-2 w-10 h-10 m-5
-        flex justify-center items-center rounded-md"
+          className="bg-gray-400/20 text-black text-2xl p-2 w-10 h-10 m-5
+        flex justify-center items-center rounded-md shadow-md"
           onClick={() => {
             setShowNav(true);
           }}

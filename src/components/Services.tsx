@@ -2,15 +2,15 @@ import { services } from "@/data";
 
 const Services = () => {
   return (
-    <section className="max-w-[1500px] mx-24 grid grid-cols-8 gap-12 mb-[10rem] max-xl:flex max-xl:flex-col max-xl:items-center max-xl:mx-8">
-      <div className="col-span-2 flex flex-col justify-start items-start gap-8 max-xl:items-center">
+    <section className="max-w-[1100px] mx-24 grid grid-cols-8 gap-12 mb-[10rem] max-xl:flex max-xl:flex-col max-xl:items-center max-xl:mx-8">
+      <div className="col-span-2 flex flex-col justify-start items-start gap-y-4 max-xl:items-center">
         <p className="font-body text-dark-purple font-semibold">
           Still wondering?
         </p>
         <h3 className="font-body dynamic-heading font-bold leading-[3rem] text-black max-xl:text-center">
           What do You Get From Us
         </h3>
-        <p className="font-body text-gray-500 max-xl:text-center">
+        <p className="font-body text-gray-500 max-xl:text-center dynamic-label">
           Why use Verbum instead of other online bible tools out there?
         </p>
       </div>
