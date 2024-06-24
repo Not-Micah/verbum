@@ -1,8 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import AlertButton from "./AlertButton";
 import { IoCloseOutline } from "react-icons/io5";
+import { StateFunction } from "@/data";
 
-const NavBarModal = ({ setShowNav }: { setShowNav: Function }) => {
+interface NavBarModalProps {
+  setShowNav: Function;
+}
+
+const NavBarModal: React.FC<NavBarModalProps> = ({ setShowNav }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,7 +26,7 @@ const NavBarModal = ({ setShowNav }: { setShowNav: Function }) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 bottom-0 w-full h-full flex justify-end">
-      <div ref={modalRef} className="max-w-[300px] pr-5 pl-20 pt-20 backdrop-filter backdrop-blur-sm bg-opacity-10 bg-black/5 shadow-lg">
+      <div ref={modalRef} className="max-w-[300px] pr-5 pl-20 pt-20 backdrop-filter backdrop-blur-sm bg-opacity-10 bg-white/40 shadow-md">
         <ul className="flex flex-col justify-start items-end gap-8 nav-list ">
           <button className="text-xl" onClick={() => setShowNav(false)}>
             <IoCloseOutline />
@@ -36,7 +41,9 @@ const NavBarModal = ({ setShowNav }: { setShowNav: Function }) => {
             <a href="#about">About Us</a>
           </li>
           <li className="dynamic-text">
-            <AlertButton text="Books" />
+            <AlertButton>
+              Books
+            </AlertButton>
           </li>
         </ul>
       </div>

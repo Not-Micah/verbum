@@ -5,17 +5,14 @@ import { useCallback } from "react";
 import { titleCase } from "@/data";
 import { CharActiveType, StateFunction } from "@/data";
 
-const CheckSelect = ({
-  label,
-  value,
-  filterActive,
-  setFilterActive,
-}: {
-  label: string;
-  value: string;
-  filterActive: CharActiveType;
-  setFilterActive: StateFunction;
-}) => {
+interface CheckSelectProps {
+  label: string,
+  value: string,
+  filterActive: CharActiveType,
+  setFilterActive: StateFunction
+}
+
+const CheckSelect: React.FC<CheckSelectProps> = ({ label, value, filterActive, setFilterActive }) => {
   const router = useRouter();
 
   ////////////////////////////////////////////

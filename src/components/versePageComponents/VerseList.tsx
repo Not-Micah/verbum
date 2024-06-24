@@ -23,7 +23,11 @@ interface Params {
   query: string;
 }
 
-const VerseList = ({ searchParams }: { searchParams: Params }) => {
+interface VerseListProps {
+  searchParams: Params
+}
+
+const VerseList: React.FC<VerseListProps> = ({ searchParams }) => {
   const toArray = (value: string | string[]) =>
     Array.isArray(value) ? value : value ? [value] : [];
 

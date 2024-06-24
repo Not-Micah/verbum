@@ -46,7 +46,7 @@ const SideBar = () => {
     <div className="flex justify-start gap-6 flex-col">
       <div className="rounded-container">
         <div className="filter-container gradient-gold">
-          <p className="font-body w-full text-center dynamic-text text-lg py-2">
+          <p className="font-body w-full text-center dynamic-label py-2">
             Active Filters
           </p>
           <div className="flex flex-row justify-center gap-2 items-center flex-wrap">

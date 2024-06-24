@@ -1,6 +1,12 @@
 import TopicBadge from "./TopicBadge"
 
-const VerseCard = ({ location, verse, topic } : { location : String , verse : String, topic: string[] | [] }) => {
+interface VerseCardProps {
+  location: string,
+  verse: string,
+  topic: string[] | []
+}
+
+const VerseCard: React.FC<VerseCardProps> = ({ location, verse, topic }) => {
   return (
     <div className="px-10 py-8 shadow-md rounded-md bg-white flex flex-col items-start justify-center gap-5
     transition-transform duration-[100] ease-linear hover:scale-[1.015]">

@@ -1,6 +1,10 @@
 import { titleCase } from "@/data"
 
-const TopicBadge = ({ data } : { data : string }) => {
+interface TopicBadgeProps {
+  data: string
+}
+
+const TopicBadge: React.FC<TopicBadgeProps> = ({ data }) => {
   return (
     <div className="px-4 py-2 bg-soft-blue font-body rounded-lg dynamic-text">
         {titleCase(data)}

@@ -10,7 +10,7 @@ const CallOut = () => {
         <p className="text-gray-500 font-body pr-5 text-center dynamic-text">{calloutMessage.description}</p>
       </div>
       <div className="flex justify-center my-10">
-        <a href="" className="px-16 py-6 max-lg:px-8 max-lg:py-5 max-md:px-6 max-md:py-4 primary-button hover-scale font-body dynamic-text rounded-full">Submit Verse</a>
+        <a href="https://forms.gle/9utmWDir7oWUt5Wc7" className="px-16 py-6 max-lg:px-8 max-lg:py-5 max-md:px-6 max-md:py-4 primary-button hover-scale font-body dynamic-text rounded-full">Submit Verse</a>
       </div>
     </section>
   )

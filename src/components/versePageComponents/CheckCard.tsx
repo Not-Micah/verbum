@@ -11,17 +11,14 @@ interface Generic {
   active: Record<string, unknown>;
 }
 
-const CheckCard = ({
-  checkBoxes,
-  filterActive,
-  setFilterActive,
-  title,
-}: {
-  checkBoxes: Generic;
-  filterActive: CharActiveType;
-  setFilterActive: StateFunction;
-  title: String;
-}) => {
+interface CheckCardProps {
+  checkBoxes: Generic,
+  filterActive: CharActiveType,
+  setFilterActive: StateFunction,
+  title: string,
+}
+
+const CheckCard: React.FC<CheckCardProps> = ({ checkBoxes, filterActive, setFilterActive, title }) => {
   const [visible, changeVisibility] = useState(false);
 
   const toggleVisibility = () => {

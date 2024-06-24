@@ -6,15 +6,13 @@ import { useCallback } from "react";
 import { FaRegCircleXmark } from "react-icons/fa6";
 import { titleCase, StateFunction } from "@/data";
 
-const FilterCard = ({
-  id,
-  idValue,
-  setFilterActive,
-}: {
-  id: string;
-  idValue: string;
-  setFilterActive: StateFunction;
-}) => {
+interface FilterCardProps {
+  id: string,
+  idValue: string,
+  setFilterActive: StateFunction
+}
+
+const FilterCard: React.FC<FilterCardProps> = ({ id, idValue, setFilterActive }) => {
   const router = useRouter();
 
   const toggleValueOfChar = () => {

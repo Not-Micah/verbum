@@ -6,30 +6,34 @@ import { CiMenuBurger } from "react-icons/ci";
 import { useState } from "react";
 import NavBarModal from "./NavBarModal";
 
-const NavBar = () => {
+import { twMerge } from "tailwind-merge";
+
+interface NavBarProps {
+  className?: string;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ className }) => {
   const [showNav, setShowNav] = useState(false);
 
   return (
     <div className="">
       <nav
-        className="px-20 z-10 py-8 w-full flex justify-between items-center max-container
-      max-sm:hidden"
+        className={twMerge("px-20 z-10 py-8 flex justify-between items-center max-container max-sm:hidden", className)}
       >
-        <a href="/" className="max-md:hidden">
-          <img src="../../logo.png" className="w-[2rem] h-[2rem]" alt="" />
-        </a>
-        <ul className="flex-1 flex justify-center items-center gap-16 nav-list">
-          <li className="dynamic-text">
+        <ul className="w-full flex justify-center items-center gap-16 nav-list">
+          <li className="dynamic-label">
             <a href="/">Home</a>
           </li>
-          <li className="dynamic-text">
+          <li className="dynamic-label">
             <a href="/verses">Verses</a>
           </li>
-          <li className="dynamic-text">
-            <a href="#about">About Us</a>
+          <li className="dynamic-label">
+            <a href="#about">About</a>
           </li>
-          <li className="dynamic-text">
-            <AlertButton text="Books" />
+          <li className="dynamic-label">
+            <AlertButton>
+              Books
+            </AlertButton>
           </li>
         </ul>
       </nav>
@@ -38,7 +42,7 @@ const NavBar = () => {
           <img src="../../logo.png" className="w-[2rem] h-[2rem]" alt="" />
         </a>
         <button
-          className="bg-gray-400/20 text-black text-2xl p-2 w-10 h-10 m-5
+          className="bg-white-400/20 text-black text-2xl p-2 w-10 h-10 m-5
         flex justify-center items-center rounded-md shadow-md"
           onClick={() => {
             setShowNav(true);
