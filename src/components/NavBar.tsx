@@ -37,10 +37,7 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
           </li>
         </ul>
       </nav>
-      <nav className="xl:hidden lg:hidden md:hidden sm:hidden z-10 relative flex flex-row items-center justify-between mx-5">
-        <a href="/" className="pl-5">
-          <img src="../../logo.png" className="w-[2rem] h-[2rem]" alt="" />
-        </a>
+      <nav className="xl:hidden lg:hidden md:hidden sm:hidden z-10 relative flex flex-row items-center justify-end mx-5">
         <button
           className="bg-white-400/20 text-black text-2xl p-2 w-10 h-10 m-5
         flex justify-center items-center rounded-md shadow-md"
