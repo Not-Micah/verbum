@@ -34,7 +34,7 @@ const Dialogue = () => {
         },
       };
 
-      const response = await fetch("http://localhost:3000/api/ai", options);
+      const response = await fetch("https://verbum-beta.vercel.app/api/ai", options);
       const data = await response.text();
 
       setUserHistory((oldUserHistory) => [
