@@ -1,3 +1,6 @@
+import { FaEraser } from "react-icons/fa";
+import { IoSend } from "react-icons/io5";
+
 interface EntryFieldProps {
   handleRequest: Function;
   setUserPrompt: Function;
@@ -16,7 +19,8 @@ const EntryField: React.FC<EntryFieldProps> = ({
   return (
     <div className="flex justify-center">
       <form
-        className="flex flex-row gap-x-2 h-[2.5rem] w-full mx-auto overflow-x-hidden"
+        className="flex flex-row gap-x-2 
+        h-[3rem] w-full overflow-x-hidden shadow-lg rounded-full px-4 py-2 bg-gray-100"
         onSubmit={(e) => {
           e.preventDefault();
           handleRequest();
@@ -24,21 +28,21 @@ const EntryField: React.FC<EntryFieldProps> = ({
       >
         <input
           type="text"
-          className="flex-grow border-2 border-gray-200 rounded-md px-2 py-1 outline-none
-          shadow-sm dynamic-label"
+          className="flex-grow bg-gray-100 outline-none w-full"
           value={userPrompt}
           onChange={(e) => setUserPrompt(e.target.value)}
           placeholder="Enter Prompt..."
         />
         <button
           disabled={sending}
-          className={`px-3 py-2 bg-gray-200 rounded-md shadow-sm dynamic-label
-            outline-none ${
+          className={`bg-blue-200 py-2 px-8 rounded-full outline-none
+            flex justify-center items-center
+            max-md:px-3 ${
             sending ? "bg-gray-300" : ""
           }`}
           type="submit"
         >
-          Enter
+          <IoSend />
         </button>
         <button
           disabled={sending}
@@ -47,10 +51,10 @@ const EntryField: React.FC<EntryFieldProps> = ({
             setUserHistory([]);
             setUserPrompt("");
           }}
-          className="px-3 py-2 bg-gray-300 rounded-md dynamic-label outline-none
-          shadow-sm"
+          className="bg-blue-200 py-2 px-8 rounded-full outline-none
+          flex justify-center items-center max-md:px-3"
         >
-          Clear
+          <FaEraser />
         </button>
       </form>
     </div>
