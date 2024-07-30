@@ -25,10 +25,10 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
             <a href="/">Home</a>
           </li>
           <li className="dynamic-label">
-            <a href="/verses">Verses</a>
+            <a href="#about">About</a>
           </li>
           <li className="dynamic-label">
-            <a href="#about">About</a>
+            <a href="/verses">Verses</a>
           </li>
           <li className="dynamic-label">
             <a href="/books">Books</a>

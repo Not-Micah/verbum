@@ -35,10 +35,10 @@ const NavBarModal: React.FC<NavBarModalProps> = ({ setShowNav }) => {
             <a href="/">Home</a>
           </li>
           <li className="dynamic-text">
-            <a href="/verses">Verses</a>
+            <a href="#about">About Us</a>
           </li>
           <li className="dynamic-text">
-            <a href="#about">About Us</a>
+            <a href="/verses">Verses</a>
           </li>
           <li className="dynamic-text">
             <a href="./books">Books</a>
