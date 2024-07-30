@@ -16,7 +16,7 @@ const EntryField: React.FC<EntryFieldProps> = ({
   return (
     <div className="flex justify-center">
       <form
-        className="flex flex-row gap-x-2 h-[2.5rem] w-full mx-auto mb-4 overflow-x-hidden"
+        className="flex flex-row gap-x-2 h-[2.5rem] w-full mx-auto overflow-x-hidden"
         onSubmit={(e) => {
           e.preventDefault();
           handleRequest();
@@ -32,7 +32,8 @@ const EntryField: React.FC<EntryFieldProps> = ({
         />
         <button
           disabled={sending}
-          className={`px-3 py-2 bg-gray-200 rounded-md shadow-sm dynamic-label ${
+          className={`px-3 py-2 bg-gray-200 rounded-md shadow-sm dynamic-label
+            outline-none ${
             sending ? "bg-gray-300" : ""
           }`}
           type="submit"
@@ -46,7 +47,7 @@ const EntryField: React.FC<EntryFieldProps> = ({
             setUserHistory([]);
             setUserPrompt("");
           }}
-          className="px-3 py-2 bg-gray-300 rounded-md dynamic-label
+          className="px-3 py-2 bg-gray-300 rounded-md dynamic-label outline-none
           shadow-sm"
         >
           Clear

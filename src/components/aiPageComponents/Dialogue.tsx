@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import EntryField from "./EntryField";
 import { BeatLoader } from "react-spinners";
 
@@ -11,30 +11,31 @@ const Dialogue = () => {
   >([]);
   const [sending, setSending] = useState(false);
 
+  const anchorRef = useRef<HTMLDivElement>(null);
+
   const promptHandler =
-    "A christian is asking you this question. So answer it in a Christian's POV (obviously not using first person...). Do not try to be more casual though, stay professional.";
+    `Respond to this from a Christian point of view (biblcle evidence/research). If the user is just saying 'Hi', respond normally.
+    DO NOT use any text formatting in your response such as '*'.`;
 
   const handleRequest = async () => {
-    setSending(true);
-
-    if (!userPrompt) {
-      throw new Error("No value entered...");
+    if (!userPrompt) {  
       return;
     }
     try {
+      setSending(true);
+
       const options = {
         method: "POST",
         body: JSON.stringify({
           history: userHistory,
-          message: userPrompt 
-        //   + promptHandler,
+          message: userPrompt + promptHandler,
         }),
         headers: {
           "Content-Type": "application/json",
         },
       };
 
-      const response = await fetch("https://verbum-beta.vercel.app/api/ai", options);
+      const response = await fetch("http://localhost:3000/api/ai", options);
       const data = await response.text();
 
       setUserHistory((oldUserHistory) => [
@@ -57,11 +58,14 @@ const Dialogue = () => {
     }
   };
 
-  useEffect(() => {}, [userHistory]);
+  useEffect(() => {
+    if (anchorRef.current && userHistory.length !== 0) {
+      anchorRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
+    }
+  }, [userHistory]);
 
   return (
-    <div className="flex flex-col h-[calc(100vh-8rem)] mt-[8rem]
-    w-full max-sm:mt-[3rem]">
+    <div className="flex flex-col w-full h-full">
       <div className="flex-grow overflow-y-auto pt-4">
         {userHistory &&
           userHistory.map((d, index) => {
@@ -84,12 +88,12 @@ const Dialogue = () => {
           })}
         {sending && (
           <div className="w-full flex items-center justify-end p-2">
-            <div className="max-w-[60%] bg-gray-300 rounded-lg
-            px-4 py-1">
-                <BeatLoader size={15} color="black" />
+            <div className="max-w-[60%] bg-gray-200/50 rounded-lg px-4 h-[35px] flex justify-center items-center">
+              <BeatLoader size={15} className="text-black/10" />
             </div>
           </div>
         )}
+        <div ref={anchorRef} className="w-full h-[10px]"></div>
       </div>
       <EntryField
         sending={sending}

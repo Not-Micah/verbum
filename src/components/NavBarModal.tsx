@@ -41,9 +41,10 @@ const NavBarModal: React.FC<NavBarModalProps> = ({ setShowNav }) => {
             <a href="#about">About Us</a>
           </li>
           <li className="dynamic-text">
-            <AlertButton>
-              Books
-            </AlertButton>
+            <a href="./books">Books</a>
+          </li>
+          <li className="dynamic-text">
+            <a href="./ai">AI Chat</a>
           </li>
         </ul>
       </div>

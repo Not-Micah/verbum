@@ -19,7 +19,7 @@ const Footer = () => {
             </Link>
             <div className="">
                 <p className="dynamic-text text-center text-white">© 2024 All rights reserved.</p>
-                <p className="dynamic-text text-center text-white">Built by <a href="https://micahtid.vercel.app/" className="underline">Micah Tid</a></p>
+                <p className="dynamic-text text-center text-white">Built by <a href="https://micahdev.vercel.app/" className="underline">Micah Tid</a></p>
             </div>
         </div>
     </footer>

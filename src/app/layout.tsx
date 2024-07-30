@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import BookModal from "@/components/bookPageComponents/BookModal";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.className}`}>
         <div className="w-full relative overflow-hidden">
+          <BookModal />
           {children}
            {/* ............................................. */}
           <div className="circle circle-lg bg-soft-pink left-[7rem] top-[-5rem]"></div>

@@ -49,8 +49,8 @@ const VerseList: React.FC<VerseListProps> = ({ searchParams }) => {
       return true;
     }
     return (
-      title.toLowerCase().includes(param.toLocaleLowerCase()) ||
-      verse.toLowerCase().includes(param.toLocaleLowerCase())
+      title.toLowerCase().includes(param.toLowerCase()) ||
+      verse.toLowerCase().includes(param.toLowerCase())
     );
   };
 

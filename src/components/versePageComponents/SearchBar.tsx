@@ -3,7 +3,11 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
-const SearchBar = () => {
+interface SearchBarProps {
+  page: string;
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ page }) => {
   const router = useRouter();
   const [query, setQuery] = useState('');
 
@@ -32,7 +36,7 @@ const SearchBar = () => {
           type="submit"
           onClick={(e) => {
             e.preventDefault();
-            router.push(`/verses?${createQueryString(query)}`);
+            router.push(`/${page}?${createQueryString(query)}`);
           }}
         >
           <FaMagnifyingGlass />

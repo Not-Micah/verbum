@@ -31,9 +31,12 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
             <a href="#about">About</a>
           </li>
           <li className="dynamic-label">
-            <AlertButton>
-              Books
-            </AlertButton>
+            <a href="/books">Books</a>
+          </li>
+          <li className="dynamic-label
+          flex flex-row justify-center items-center gap-x-5">
+            <a href="/ai" className="">AI</a>
+            <div className="text-xs bg-green-300 rounded-md ring-1 ring-green-400 p-1">New</div>
           </li>
         </ul>
       </nav>

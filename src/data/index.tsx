@@ -155,7 +155,7 @@ export const aboutUs = [
   {icon: <FiDatabase />, title: "Large Database", description: "Our database has over 300+ verses, selected from books throughout the bible."},
   {icon: <FiFilter />, title: "Filtering System", description: "We offer many filters, enabling you to find the right verses for encouragement."},
   {icon: <BiBible />, title: "Reliability", description: "Help get through different situations and struggles through encouragement, directly from the word of God."},
-  {icon: <HiOutlineArrowCircleUp />, title: "Growth", description: "Verbum is still in development, and our design was heavily inspired by Talem."}
+  {icon: <HiOutlineArrowCircleUp />, title: "Growth", description: "Verbum is still in development and is adding new features such as our book summaries and AI chat."}
 ]
 
 ///////////// Service Cards /////////////

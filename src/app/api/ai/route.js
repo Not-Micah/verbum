@@ -19,6 +19,6 @@ export async function POST(request) {
 
     } catch (error) {
         console.error("Error handling POST request:", error);
-        return new Response(JSON.stringify({ error: "Internal Server Error" }), { status: 500 });
+        return new Response(JSON.stringify({ message: "Unable to carry out a response due to explicit content." }), { status: 500 });
     }
 }

@@ -19,7 +19,7 @@ const Database = async ({ searchParams }: { searchParams: Params }) => {
               <SideBar />
             </div>
             <div className="col-span-8 rounded-container">
-              <SearchBar />
+              <SearchBar page="verses" />
               <VerseList searchParams={searchParams} />
             </div>
           </div>
