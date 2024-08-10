@@ -148,14 +148,15 @@ export const filterData = {
 
 ///////////// Grid Layout ///////////////
 import { HiOutlineArrowCircleUp } from "react-icons/hi";
-import { FiDatabase, FiFilter } from "react-icons/fi";
+import { FiDatabase } from "react-icons/fi";
 import { BiBible } from "react-icons/bi";
+import { FaComputer } from "react-icons/fa6";
 
 export const aboutUs = [
-  {icon: <FiDatabase />, title: "Large Database", description: "Our database has over 300+ verses, selected from books throughout the bible."},
-  {icon: <FiFilter />, title: "Filtering System", description: "We offer many filters, enabling you to find the right verses for encouragement."},
-  {icon: <BiBible />, title: "Reliability", description: "Help get through different situations and struggles through encouragement, directly from the word of God."},
-  {icon: <HiOutlineArrowCircleUp />, title: "Growth", description: "Verbum is still in development and is adding new features such as our book summaries and AI chat."}
+  {icon: <FiDatabase />, title: "Verse Database", description: "Our database has over 300+ verses, selected from books throughout the bible, with numerous filtering capabilities."},
+  {icon: <BiBible />, title: "Book Summaries", description: "We also offer summaries for all 66 books of the bible, including the book's topics and themes."},
+  {icon: <FaComputer />, title: "AI Chat", description: "Verbum recently added a new AI chat page where users can ask questions about their faith and get responses based of biblicle truth."},
+  {icon: <HiOutlineArrowCircleUp />, title: "Up Coming", description: "Verbum is still in development and is adding new features really soon!"}
 ]
 
 ///////////// Service Cards /////////////
@@ -164,7 +165,7 @@ import { FaUser, FaHandHoldingHeart } from "react-icons/fa";
 
 export const services = [
   {icon: <MdAttachMoney />, title: "No Paywall", description: "All services on Verbum are completely free. No subscriptions! No paywall!"},
-  {icon: <FaUser />, title: "No Accounts", description: "No signup or logins required. Enjoy, the easy and simple access of Verbum"},
+  {icon: <FaUser />, title: "No Accounts", description: "No signup or logins required. Enjoy, the easy and simple access of Verbum!"},
   {icon: <FaHandHoldingHeart />, title: "Infinite Filters", description: "Verbum has no filter limits or restrictions. Unlimited usage for all users!"},
 ]
 

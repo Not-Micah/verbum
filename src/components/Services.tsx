@@ -8,7 +8,7 @@ const Services = () => {
           Still wondering?
         </p>
         <h3 className="font-body dynamic-heading font-bold leading-[3rem] text-black max-xl:text-center">
-          What do You Get From Us
+          Why Choose to Use Us?
         </h3>
         <p className="font-body text-gray-500 max-xl:text-center dynamic-label">
           Why use Verbum instead of other online bible tools out there?

@@ -14,8 +14,9 @@ const Dialogue = () => {
   const anchorRef = useRef<HTMLDivElement>(null);
 
   const promptHandler =
-    `Respond to this from a Christian point of view (biblcle evidence/research). If the user is just saying 'Hi', respond normally.
-    DO NOT use any text formatting in your response such as '*'.`;
+    `Answer this question from a Christian standpoint: first display a verse (NLT) that helps answer the question and after explain about it. 
+    If the user is just saying 'Hi' or anything like that, respond normally.
+    DO NOT bold/italics anything in your response text.`;
 
   const handleRequest = async () => {
     if (!userPrompt) {  
@@ -35,6 +36,8 @@ const Dialogue = () => {
         },
       };
 
+      //https://verbum-beta.vercel.app/api/ai
+      //http://localhost:3000/api/ai
       const response = await fetch("https://verbum-beta.vercel.app/api/ai", options);
       const data = await response.text();
 
@@ -89,7 +92,7 @@ const Dialogue = () => {
         {sending && (
           <div className="w-full flex items-center justify-end p-2">
             <div className="max-w-[60%] bg-gray-200/50 rounded-lg px-4 h-[35px] flex justify-center items-center">
-              <BeatLoader size={15} className="text-black/10" />
+              <BeatLoader size={15} />
             </div>
           </div>
         )}
