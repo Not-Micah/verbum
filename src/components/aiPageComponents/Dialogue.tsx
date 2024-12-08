@@ -106,7 +106,7 @@ topics and invite them to ask faith-related questions.
           ))}
         {sending && (
           <div className="w-full flex items-center justify-end p-2">
-            <div className="max-w-[60%] bg-gray-200/50 rounded-lg px-4 h-[35px] flex justify-center items-center">
+            <div className="max-w-[60%] min-w-[150px] bg-gray-200/50 rounded-lg px-4 h-[35px] flex justify-center items-center">
               <BeatLoader 
               size={15} 
               className="opacity-50" />
