@@ -13,13 +13,27 @@ const Dialogue = () => {
 
   const anchorRef = useRef<HTMLDivElement>(null);
 
-  const promptHandler =
-    `Answer this question from a Christian standpoint: first display a verse (NLT) that helps answer the question and after explain about it. 
-    If the user is just saying 'Hi' or anything like that, respond normally.
-    DO NOT bold/italics anything in your response text.`;
+  const promptHandler = `
+Please assist users by answering their questions from a Christian standpoint. Follow these guidelines:
+
+1. If the question is related to Christianity or religion:
+   - Begin by displaying a Bible verse (New Living Translation - NLT) that addresses or relates to the question.
+   - Provide a clear and thoughtful explanation of the verse, connecting it to the user's question in a concise and respectful manner.
+
+2. If the user greets or sends a casual message (e.g., "Hi", "How are you?"):
+   - Respond in a friendly and conversational tone, acknowledging their greeting.
+
+3. If the question is not related to Christianity or religion:
+   - Politely mention that your primary purpose is to assist with religious or Christian-related questions and offer to help if they have any such inquiries.
+
+**Additional Instructions**:
+- Keep the tone respectful, warm, and aligned with Christian values.
+- Use bold text for emphasis where necessary.
+- Insert line breaks between logical sections for clarity.
+  `;
 
   const handleRequest = async () => {
-    if (!userPrompt) {  
+    if (!userPrompt) {
       return;
     }
     try {
@@ -61,6 +75,21 @@ const Dialogue = () => {
     }
   };
 
+  const formatResponse = (text: string) => {
+    const paragraphs = text.split("\n").filter((line) => line.trim() !== "");
+    return paragraphs.map((para, index) => (
+      <p key={index} className="mb-2">
+        {para.split("**").map((part, i) =>
+          i % 2 === 1 ? (
+            <strong key={i}>{part}</strong>
+          ) : (
+            part
+          )
+        )}
+      </p>
+    ));
+  };
+
   useEffect(() => {
     if (anchorRef.current && userHistory.length !== 0) {
       anchorRef.current.scrollIntoView({ behavior: "smooth", block: "end" });
@@ -71,28 +100,28 @@ const Dialogue = () => {
     <div className="flex flex-col w-full h-full">
       <div className="flex-grow overflow-y-auto pt-4">
         {userHistory &&
-          userHistory.map((d, index) => {
-            return (
+          userHistory.map((d, index) => (
+            <div
+              key={index}
+              className={`${
+                d.role === "user" ? "justify-start" : "justify-end"
+              } w-full flex items-center p-2`}
+            >
               <div
-                key={index}
                 className={`${
-                  d.role === "user" ? "justify-start" : "justify-end"
-                } w-full flex items-center p-2`}
+                  d.role === "user" ? "bg-soft-pink/50" : "bg-gray-200/50"
+                } max-w-[60%] p-2 rounded-lg shadow-sm dynamic-label`}
               >
-                <div
-                  className={`${
-                    d.role === "user" ? "bg-soft-pink/50" : "bg-gray-200/50"
-                  } max-w-[60%] w-full p-2 rounded-lg shadow-sm dynamic-label`}
-                >
-                  {d.parts[0].text}
-                </div>
+                {d.role === "model" ? formatResponse(d.parts[0].text) : d.parts[0].text}
               </div>
-            );
-          })}
+            </div>
+          ))}
         {sending && (
           <div className="w-full flex items-center justify-end p-2">
             <div className="max-w-[60%] bg-gray-200/50 rounded-lg px-4 h-[35px] flex justify-center items-center">
-              <BeatLoader size={15} />
+              <BeatLoader 
+              size={15} 
+              className="opacity-50" />
             </div>
           </div>
         )}
