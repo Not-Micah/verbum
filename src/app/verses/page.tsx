@@ -10,7 +10,7 @@ interface Params {
 
 const Database = async ({ searchParams }: { searchParams: Params }) => {
   return (
-    <div className="mb-2">
+    <div className="mb-2 min-h-[100vh]">
       <section className="max-[300px]:hidden">
         <NavBar />
         <div className="flex flex-col mx-10 max-sm:mx-4">
